@@ -1,0 +1,20 @@
+<table ng:controller="WineListCtrl">
+<thead>
+  <tr>
+      <th data-field="name">Name</th>
+      <th data-field="Contry">Country</th>
+      <th data-field="year">Year</th>
+      <th></th>
+      <th></th>
+  </tr>
+</thead>
+
+<tbody ng:repeat="wine in wines" >
+  <tr>
+    <td>{{ wine.name }}</td>
+    <td>{{ wine.country }}</td>
+    <td>{{ wine.year }}</td>
+    <td> <a href='#/wines/{{ wine.id }}' class="waves-effect waves-light btn"><i class="material-icons left">input</i>Edit</a></td>
+  </tr>
+</tbody>
+</table>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:ng="http://angularjs.org">
+<head>
+<title>Angular Curd</title>
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body ng:controller="RouteCtrl">
+
+<div id="header">
+    Wines
+    <a class="btn-floating waves-effect waves-light teal accent-4" ng:click="addWine()"><i class="material-icons">add</i></a> 
+</div>
+<div id="content">
+	<div class="row">
+      <div class="col s12">
+      	<ng:view></ng:view>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+      	<ng:include src="'tpl/wine-list.html'"></ng:include>
+      </div>
+    </div>
+</div>
+
+<script src="lib/angular-0.9.19.min.js" ng:autobind></script>
+<script type="text/javascript" src="lib/materialize.min.js" ng:autobind></script>
+
+
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+
+</body>
+
+</html>
